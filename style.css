@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Flex", sans-serif;
+}
+
+body {
+  background-color: #222831;
+  color: #eee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 20px;
+  border: 2px solid #00adb5;
+}
+
+input {
+  font-size: 2rem;
+  border-radius: 20px;
+  outline: none;
+  border: 2px solid #eee;
+  text-align: center;
+  color: #eee;
+  width: 50%;
+  background-color: transparent;
+  text-transform: capitalize;
+}
+
+button,
+.task button {
+  width: 20%;
+  background-color: #00adb5;
+  color: #eee;
+  font-size: 2rem;
+  border: 2px solid #eee;
+  border-radius: 20px;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #00adb5;
+}
+
+h2 {
+  font-size: 2.5rem;
+  color: #eee;
+}
+
+.tasklist {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 1px;
+  border-radius: 10px;
+  margin: 20px;
+  /* border: 2px solid #00adb5; */
+  gap: 1px;
+}
+.task p {
+  width: 70%;
+  /* background-color: #00adb5; */
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+
+.task p::before {
+  content: "task: ";
+  color: #4b5058;
+  font-size: 1.5rem;
+}
+.task {
+  border: 2px solid #00adb5;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 5px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 300px) and (max-width: 700px) {
+  .input {
+    margin: 20px 10px;
+    width: 100%;
+    max-width: 100%;
+  }
+  .input input {
+    font-size: 1.5rem;
+    width: 70%;
+    padding: 5px;
+  }
+
+  button {
+    font-size: 1rem;
+  }
+
+  .tasklist {
+    justify-content: space-evenly;
+    max-width: 100%;
+    width: 100%;
+    padding: 5px;
+    gap: 10px;
+  }
+
+  .task {
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .task button {
+    font-size: 1rem;
+  }
+  .task p {
+    font-size: 1.5rem;
+  }
+}
