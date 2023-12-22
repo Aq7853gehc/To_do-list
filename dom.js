@@ -1,6 +1,9 @@
 function addElement() {
   let input = document.querySelector("input");
   let value = input.value;
+  if (value === "") {
+    alert("please enter the task");
+  } else {
   let div = document.createElement("div");
   div.setAttribute("class", "task");
   let task = document.createElement("p");
@@ -17,6 +20,7 @@ function addElement() {
   div.append(button);
   document.getElementById("tsklst").append(div);
   input.value = "";
+  }
 }
 
 
